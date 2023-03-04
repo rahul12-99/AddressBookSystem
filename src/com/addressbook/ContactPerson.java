@@ -10,20 +10,16 @@ public class ContactPerson {
     long phoneNumber;
     String email;
 
-    public ContactPerson(String firstName, String lastName, String address, String city, String state, int zip, int phoneNumber) {
+    public ContactPerson(String firstName, String lastName, String address, String city, String state, String email, int zip, long phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.city = city;
         this.state = state;
+        this.email = email;
         this.zip = zip;
         this.phoneNumber = phoneNumber;
 
-    }
-
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public long getPhoneNumber() {
@@ -42,6 +38,14 @@ public class ContactPerson {
         this.zip = zip;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getState() {
         return state;
     }
@@ -50,10 +54,17 @@ public class ContactPerson {
         this.state = state;
     }
 
+    public String getCity() {
+        return city;
+    }
+
     public void setCity(String city) {
         this.city = city;
     }
 
+    public String getAddress() {
+        return address;
+    }
 
     public void setAddress(String address) {
         this.address = address;
@@ -63,6 +74,9 @@ public class ContactPerson {
         this.lastName = lastName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -71,7 +85,6 @@ public class ContactPerson {
     public String getFirstName() {
         return firstName;
     }
-
 
     public ContactPerson() {
         super();
