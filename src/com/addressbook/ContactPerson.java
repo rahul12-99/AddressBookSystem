@@ -6,21 +6,44 @@ public class ContactPerson {
     String address;
     String city;
     String state;
-    String email;
     int zip;
     long phoneNumber;
+    String email;
+
+    public ContactPerson(String firstName, String lastName, String address, String city, String state, int zip, int phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+
+    }
 
 
     public void setEmail(String email) {
         this.email = email;
     }
 
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
     public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
+    public int getZip() {
+        return zip;
+    }
+
     public void setZip(int zip) {
         this.zip = zip;
+    }
+
+    public String getState() {
+        return state;
     }
 
     public void setState(String state) {
@@ -31,6 +54,7 @@ public class ContactPerson {
         this.city = city;
     }
 
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -39,17 +63,24 @@ public class ContactPerson {
         this.lastName = lastName;
     }
 
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
 
     public ContactPerson() {
         super();
     }
 
+    @Override
     public String toString() {
-        return "Person [name=" + this.firstName + " " + this.lastName + ", Address=" + this.address + ", City="
-                + this.city + ", state=" + this.state + ", email=" + this.email + ", zip=" + this.zip
-                + ", phone=" + this.phoneNumber + "]";
+        return "Employee [name=" + this.firstName + " " + this.lastName + ", Address=" + this.address + ", City="
+                + this.city + ", state=" + this.state + ", zip=" + this.zip
+                + ", phone=" + this.phoneNumber + ", Email=" + this.email + "]";
     }
 }
