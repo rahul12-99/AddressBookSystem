@@ -11,17 +11,40 @@ public class ContactPerson {
     long phoneNumber;
 
 
-    public ContactPerson(String firstName, String lastName, String address, String city, String state, String email, int zip, long phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
+    public void setEmail(String email) {
         this.email = email;
-        this.zip = zip;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
 
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
 
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public ContactPerson() {
+        super();
     }
 
     public String toString() {
