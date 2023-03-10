@@ -9,6 +9,7 @@ public class AddressBook extends ContactPerson {
     public static ArrayList<ContactPerson> person = new ArrayList<>();
 
     public static void addContact() {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first name");
         newPerson.setFirstName(sc.nextLine());
@@ -97,7 +98,7 @@ public class AddressBook extends ContactPerson {
         Scanner scanner = new Scanner(System.in);
         int button = 0;
         int choice;
-        System.out.println("Welcome to Address Book Program");
+        System.out.println(".........Welcome to Address Book Program........");
 
         while (button != 1) {
             System.out.println("Enter 1 to add contact details");
