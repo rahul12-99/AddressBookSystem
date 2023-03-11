@@ -94,27 +94,31 @@ public class AddressBook extends ContactPerson {
         }
     }
 
-    public static void main(String[] args) {
+    public void addContactsMain(AddressBook addressBook) {
         Scanner scanner = new Scanner(System.in);
-        int button = 0;
+        int flag = 0;
         int choice;
-        System.out.println(".........Welcome to Address Book Program........");
-
-        while (button != 1) {
+        System.out.println("Welcome to Address Book Program");
+        while (flag != 1) {
             System.out.println("Enter 1 to add contact details");
             System.out.println("Enter 2 to edit details");
             System.out.println("Enter 3 to delete contact");
             System.out.println("Enter 4 to exit");
             choice = scanner.nextInt();
             scanner.nextLine();
-            if (choice == 1) {
-                addContact();
-            } else if (choice == 2) {
-                modify();
-            } else if (choice == 3) {
-                deleteContact();
-            } else if (choice == 4) {
-                button = 1;
+            switch (choice) {
+                case 1:
+                    addContact();
+                    break;
+                case 2:
+                    modify();
+                    break;
+                case 3:
+                    deleteContact();
+                    break;
+                case 4:
+                    flag = 1;
+                    break;
             }
         }
     }
